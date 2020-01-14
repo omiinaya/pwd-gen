@@ -24,6 +24,9 @@
                 console.log(charset);
             } else {
                 text.style.display = "none";
+                charset = charset.filter(function (item) {
+                return special.indexOf(item) === -1;
+                });
             }
         }
         function numericFn() {
@@ -36,6 +39,9 @@
                 console.log(charset);
             } else {
                 text.style.display = "none";
+                charset = charset.filter(function (item) {
+                return numeric.indexOf(item) === -1;
+                });
             }
         }
         function lowerFn() {
@@ -48,6 +54,9 @@
                 console.log(charset);
             } else {
                 text.style.display = "none";
+                charset = charset.filter(function (item) {
+                return lower.indexOf(item) === -1;
+                });
             }
         }
         function upperFn() {
@@ -60,6 +69,9 @@
                 console.log(charset);
             } else {
                 text.style.display = "none";
+                charset = charset.filter(function (item) {
+                return upper.indexOf(item) === -1;
+                });
             }
         }
         function setLength() {
