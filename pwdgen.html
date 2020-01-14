@@ -4,7 +4,15 @@
         <title>Password Generator</title>
     </head>
     <script>
-        x = pwdLength.value;
+        var checkBox1 = document.getElementById("specialFn");
+        var checkBox2 = document.getElementById("numericCheck");
+        var checkBox3 = document.getElementById("lowerCheck");
+        var checkBox4 = document.getElementById("upperCheck");
+        let special = ["!","@","#","$","%","^","&","*","(",")","-","+","{","}","[","]","<",">","/","~","_","=","|","?",".",","];
+        let numeric = ["0","1","2","3","4","5","6","7","8","9"];
+        let lower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+        let upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+        let charset = [];
 
         function specialFn() {
             var checkBox = document.getElementById("specialCheck");
@@ -12,6 +20,8 @@
             if (checkBox.checked == true){
                 text.style.display = "block";
                 text.style.color = "red";
+                charset = charset.concat(special);
+                console.log(charset);
             } else {
                 text.style.display = "none";
             }
@@ -22,6 +32,8 @@
             if (checkBox.checked == true){
                 text.style.display = "block";
                 text.style.color = "green";
+                charset = charset.concat(numeric);
+                console.log(charset);
             } else {
                 text.style.display = "none";
             }
@@ -32,6 +44,8 @@
             if (checkBox.checked == true){
                 text.style.display = "block";
                 text.style.color = "yellow";
+                charset = charset.concat(lower);
+                console.log(charset);
             } else {
                 text.style.display = "none";
             }
@@ -42,6 +56,8 @@
             if (checkBox.checked == true){
                 text.style.display = "block";
                 text.style.color = "pink";
+                charset = charset.concat(upper);
+                console.log(charset);
             } else {
                 text.style.display = "none";
             }
@@ -49,6 +65,11 @@
         function setLength() {
             var pwdLength=document.getElementById("length");
             alert(pwdLength.value);
+        }
+        //test
+
+        function generatePassword() {
+            //filler
         }
         </script>
     <body>
@@ -66,7 +87,10 @@
         <br>
         <input type="checkbox" id="upperCheck" onclick="upperFn()"> Uppercase
         <br>
+        <button onclick="generatePassword()">Generate Passsword</button>
 
         <p id="text" style="display:none">Checkbox is CHECKED!</p>
+
+        <p id="password">pre-mod text</p>
     </body>
 </html>
