@@ -69,7 +69,7 @@ function setLength() {
 function generatePassword() {
         var result = "";
         for (var i=0; i<length;i++)
-        result += charset[Math.floor(Math.random()*length)];
+        result += charset[Math.floor(Math.random()*charset.length)];
         console.log(charset);
         console.log(result);
 }
