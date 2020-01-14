@@ -27,6 +27,7 @@
                 charset = charset.filter(function (item) {
                 return special.indexOf(item) === -1;
                 });
+                console.log(charset);
             }
         }
         function numericFn() {
@@ -42,6 +43,7 @@
                 charset = charset.filter(function (item) {
                 return numeric.indexOf(item) === -1;
                 });
+                console.log(charset);
             }
         }
         function lowerFn() {
@@ -57,6 +59,7 @@
                 charset = charset.filter(function (item) {
                 return lower.indexOf(item) === -1;
                 });
+                console.log(charset);
             }
         }
         function upperFn() {
@@ -72,14 +75,13 @@
                 charset = charset.filter(function (item) {
                 return upper.indexOf(item) === -1;
                 });
+                console.log(charset);
             }
         }
         function setLength() {
             var pwdLength=document.getElementById("length");
             alert(pwdLength.value);
         }
-        //test
-
         function generatePassword() {
             //filler
         }
