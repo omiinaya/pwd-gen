@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password Generator</title>
+    </head>
+    <script>
+        function myFunction() {
+          var checkBox = document.getElementById("myCheck");
+          var text = document.getElementById("text");
+          if (checkBox.checked == true){
+            text.style.display = "block";
+            text.style.color="blue";
+          } else {
+             text.style.display = "none";
+          }
+        }
+        function specialFn() {
+            var checkBox = document.getElementById("specialCheck");
+            var text = document.getElementById("text");
+            if (checkBox.checked == true){
+                text.style.display = "block";
+                text.style.color = "red";
+            } else {
+                text.style.display = "none";
+            }
+        }
+        function numericFn() {
+            var checkBox = document.getElementById("numericCheck");
+            var text = document.getElementById("text");
+            if (checkBox.checked == true){
+                text.style.display = "block";
+                text.style.color = "green";
+            } else {
+                text.style.display = "none";
+            }
+        }
+        function lowerFn() {
+            var checkBox = document.getElementById("lowerCheck");
+            var text = document.getElementById("text");
+            if (checkBox.checked == true){
+                text.style.display = "block";
+                text.style.color = "yellow";
+            } else {
+                text.style.display = "none";
+            }
+        }
+        function upperFn() {
+            var checkBox = document.getElementById("upperCheck");
+            var text = document.getElementById("text");
+            if (checkBox.checked == true){
+                text.style.display = "block";
+                text.style.color = "pink";
+            } else {
+                text.style.display = "none";
+            }
+        }
+        </script>
+    <body>
+        <p>WIP Password Generator</p>
+        
+        <input type="checkbox" id="myCheck" onclick="myFunction()"> Test
+        <br>
+        <input type="checkbox" id="specialCheck" onclick="specialFn()"> Special Characters
+        <br>
+        <input type="checkbox" id="numericCheck" onclick="numericFn()"> Numeric Characters
+        <br>
+        <input type="checkbox" id="lowerCheck" onclick="lowerFn()"> Lowercase
+        <br>
+        <input type="checkbox" id="upperCheck" onclick="upperFn()"> Uppercase
+
+        <p id="text" style="display:none">Checkbox is CHECKED!</p>
+    </body>
+</html>
