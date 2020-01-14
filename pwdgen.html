@@ -2,15 +2,11 @@
 <html>
     <head>
         <title>Password Generator</title>
+        <script src="scripts.js"></script>
     </head>
-    <script src="scripts.js"></script>
     <body>
         <p>WIP Password Generator</p>
 
-        Password length: 
-        <input type="number" id="length" min="8" max="128">
-        <button onclick="setLength()">submit</button>
-        <br>
         <input type="checkbox" id="specialCheck" onclick="specialFn()"> Special Characters
         <br>
         <input type="checkbox" id="numericCheck" onclick="numericFn()"> Numeric Characters
@@ -19,6 +15,10 @@
         <br>
         <input type="checkbox" id="upperCheck" onclick="upperFn()"> Uppercase
         <br>
+        Password length: 
+        <input type="number" id="lengthCheck" min="8" max="128">
+        <button onclick="setLength()">submit</button>
+        <p id="lengthText"></p>
         <button onclick="generatePassword()">Generate Passsword</button>
 
         <p id="text" style="display:none">Checkbox is CHECKED!</p>
