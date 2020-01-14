@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password Generator</title>
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <p>WIP Password Generator</p>
+
+        <input type="checkbox" id="lowerCheck" onclick="lowerFn()"> Lowercase
+        <br>
+        <input type="checkbox" id="upperCheck" onclick="upperFn()"> Uppercase
+        <br>
+        <input type="checkbox" id="specialCheck" onclick="specialFn()"> Special Characters
+        <br>
+        <input type="checkbox" id="numericCheck" onclick="numericFn()"> Numeric Characters
+        <br>
+        Password length: 
+        <input type="number" id="lengthCheck" min="8" max="128">
+        <button onclick="setLength()">save</button>
+
+        <p id="password">Press button to generate a password.</p>
+        <button onclick="generatePassword()">Generate Passsword</button>
+    </body>
+</html>
