@@ -65,4 +65,5 @@ function generatePassword() {
         document.getElementById("password").innerHTML = result;
         console.log(charset);
         console.log(result);
+        console.log(result.length);
 }
