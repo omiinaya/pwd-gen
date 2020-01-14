@@ -4,16 +4,8 @@
         <title>Password Generator</title>
     </head>
     <script>
-        function myFunction() {
-          var checkBox = document.getElementById("myCheck");
-          var text = document.getElementById("text");
-          if (checkBox.checked == true){
-            text.style.display = "block";
-            text.style.color="blue";
-          } else {
-             text.style.display = "none";
-          }
-        }
+        x = pwdLength.value;
+
         function specialFn() {
             var checkBox = document.getElementById("specialCheck");
             var text = document.getElementById("text");
@@ -54,11 +46,17 @@
                 text.style.display = "none";
             }
         }
+        function setLength() {
+            var pwdLength=document.getElementById("length");
+            alert(pwdLength.value);
+        }
         </script>
     <body>
         <p>WIP Password Generator</p>
-        
-        <input type="checkbox" id="myCheck" onclick="myFunction()"> Test
+
+        Password length: 
+        <input type="number" id="length" min="8" max="128">
+        <button onclick="setLength()">submit</button>
         <br>
         <input type="checkbox" id="specialCheck" onclick="specialFn()"> Special Characters
         <br>
@@ -67,6 +65,7 @@
         <input type="checkbox" id="lowerCheck" onclick="lowerFn()"> Lowercase
         <br>
         <input type="checkbox" id="upperCheck" onclick="upperFn()"> Uppercase
+        <br>
 
         <p id="text" style="display:none">Checkbox is CHECKED!</p>
     </body>
