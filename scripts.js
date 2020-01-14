@@ -67,10 +67,9 @@ function setLength() {
     console.log(length);
 }
 function generatePassword() {
-    for (var i=0, n=charset.length; i < length; ++i) {
-        var content = charset[Math.floor(Math.random()*n)];
-}
-    document.getElementById("password").innerHTML = content;
+        var result = "";
+        for (var i=0; i<length;i++)
+        result += charset[Math.floor(Math.random()*length)];
         console.log(charset);
-        console.log(length);
+        console.log(result);
 }
