@@ -15,10 +15,11 @@
         <br>
         <input type="checkbox" id="numericCheck" onclick="numericFn()"> Numeric Characters
         <br>
-        Password length: 
+        <p id="currentLength">current length: 0</p>
+
+        set length: 
         <input type="number" id="lengthCheck" min="8" max="128">
         <button onclick="setLength()">save</button>
-
         <p id="password">Press button to generate a password.</p>
         <button onclick="generatePassword()">Generate Passsword</button>
     </body>

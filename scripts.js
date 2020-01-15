@@ -55,16 +55,34 @@ function upperFn() {
 }
 function setLength() {
     var pwdLength=document.getElementById("lengthCheck");
+    if (pwdLength.value<8) {
+        length=8;
+        alert("minimum password length is 8.");
+        document.getElementById("currentLength").innerHTML = "current length: "+length;
+    }
+    else if (pwdLength.value>128) {
+        length=128;
+        alert("maximum password length is 128.");
+        document.getElementById("currentLength").innerHTML = "current length: "+length;
+    } else {
     length = pwdLength.value;
+    document.getElementById("currentLength").innerHTML = "current length: "+length;
+    }
     console.log("new password length: "+length);
 }
 function generatePassword() {
-        var result = "";
+    var result = "";
+    if (charset.length < 1) {
+        alert("You must choose at least one of the options.");
+    }
+    else if (length==0) {
+        alert("You must set a length for the password.");
+    } else {
         for (var i=0; i<length;i++)
         result += charset[Math.floor(Math.random()*charset.length)];
         document.getElementById("password").innerHTML = result;
         console.log(charset);
         console.log(result);
         console.log(result.length);
-        console.log("test");
+    }
 }
