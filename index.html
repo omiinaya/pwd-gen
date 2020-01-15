@@ -20,7 +20,10 @@
         set length: 
         <input type="number" id="lengthCheck" min="8" max="128">
         <button onclick="setLength()">save</button>
-        <p id="password">Press button to generate a password.</p>
+        <br>
+        <input type="text" id="password" value="generated password">
+        <button onclick="copyFn()">Copy to Clipboard</button>
+        <br>
         <button onclick="generatePassword()">Generate Passsword</button>
     </body>
 </html>

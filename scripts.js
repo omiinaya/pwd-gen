@@ -53,6 +53,15 @@ function upperFn() {
         console.log(charset);
     }
 }
+function copyFn() {
+    var copyText = document.getElementById("password");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  
+    document.execCommand("copy");
+  
+    alert("Copied the text: " + copyText.value);
+  }
 function setLength() {
     var pwdLength=document.getElementById("lengthCheck");
     if (pwdLength.value<8) {
@@ -80,7 +89,7 @@ function generatePassword() {
     } else {
         for (var i=0; i<length;i++)
         result += charset[Math.floor(Math.random()*charset.length)];
-        document.getElementById("password").innerHTML = result;
+        document.getElementById("password").value = result;
         console.log(charset);
         console.log(result);
         console.log(result.length);
