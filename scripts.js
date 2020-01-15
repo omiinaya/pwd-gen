@@ -57,27 +57,30 @@ function copyFn() {
     var copyText = document.getElementById("password");
     copyText.select();
     copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-  
     document.execCommand("copy");
-  
-    alert("Copied the text: " + copyText.value);
   }
 function setLength() {
     var pwdLength=document.getElementById("lengthCheck");
     if (pwdLength.value<8) {
         length=8;
         alert("minimum password length is 8.");
-        document.getElementById("currentLength").innerHTML = "current length: "+length;
+
+        document.getElementById("lengthCheck").placeholder = length;
+        document.getElementById("lengthCheck").value = "";
     }
     else if (pwdLength.value>128) {
         length=128;
         alert("maximum password length is 128.");
-        document.getElementById("currentLength").innerHTML = "current length: "+length;
+
+        document.getElementById("lengthCheck").placeholder = length;
+        document.getElementById("lengthCheck").value = "";
     } else {
     length = pwdLength.value;
-    document.getElementById("currentLength").innerHTML = "current length: "+length;
+    document.getElementById("lengthCheck").placeholder = length;
+    document.getElementById("lengthCheck").value = "";
     }
     console.log("new password length: "+length);
+    console.log(document.getElementById("lengthCheck").placeholder);
 }
 function generatePassword() {
     var result = "";
