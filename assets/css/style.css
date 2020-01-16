@@ -1,16 +1,21 @@
 h1 {
+    color:white;
     font-family: 'Fira Code', monospace;
+    font-size: 38px;
     text-align: center;
 }
+.header-bar {
+    background-color: black;
+    opacity: 90%;
+}
 body {
-    background-image: url(../images/placeholder.jpg);
+    font-family: 'Fira Code', monospace;
+    background-image: url(https://media.giphy.com/media/Y0cKnGMCBTNTi/giphy.gif);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
-    font-family: 'Fira Code', monospace;
 }
-.link {
+.img-link {
     cursor: pointer;
 }
 ul {
@@ -18,14 +23,22 @@ ul {
     display: inline-block;
     padding: 5px;
 }
-.app-container {
+#app-container {
     border-style: solid;
     border-width: 3px;
-    border-color:black;
+    border-color:white;
+    background-color: black;
+    opacity: 90%;
 }
 .checkbox-grid {
+    color:white;
     text-align:center;
 }
 .password-box {
+    color:white;
     text-align:center;
+}
+#footer {
+    color:white;
+    text-align: center;
 }

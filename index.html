@@ -8,25 +8,32 @@
         <script src="assets/scripts/scripts.js"></script>
     </head>
     <body>
-        <h1>WIP Password Generator</h1>
-        <div class="app-container">
-            <div class="checkbox-grid">
-                <ul>
-                    <li><input type="checkbox" id="lowerCheck" onclick="lowerFn()"><label for="lowerCheck">Lowercase</label></li>
-                    <li><input type="checkbox" id="upperCheck" onclick="upperFn()"><label for="upperCheck">Uppercase</label></li>
-                </ul>
-                <ul>
-                    <li><input type="checkbox" id="specialCheck" onclick="specialFn()"><label for="specialCheck">Special</label></li>
-                    <li><input type="checkbox" id="numericCheck" onclick="numericFn()"><label for="numericCheck">Numeric</label></li>
-                </ul>
+        <div class="header-bar">
+            <h1>Secure Password Generator</h1>
+        </div>
+        <div class="row">
+            <div class="col-4 offset-4" id="app-container">
+                <br>
+                <div class="checkbox-grid">
+                    <ul>
+                        <li><input type="checkbox" id="lowerCheck" onclick="lowerFn()"><label for="lowerCheck">Lowercase</label></li>
+                        <li><input type="checkbox" id="upperCheck" onclick="upperFn()"><label for="upperCheck">Uppercase</label></li>
+                    </ul>
+                    <ul>
+                        <li><input type="checkbox" id="specialCheck" onclick="specialFn()"><label for="specialCheck">Special</label></li>
+                        <li><input type="checkbox" id="numericCheck" onclick="numericFn()"><label for="numericCheck">Numeric</label></li>
+                    </ul>
+                </div>
+                <div class="password-box">
+                    <ul>
+                        <li><label for="lengthCheck">set length:</label><input type="number" id="lengthCheck" placeholder="0" min="8" max="128"><button onclick="setLength()">save</button></li>
+                        <li><textarea id="password" cols="37" rows="6" placeholder="password will go here."></textarea></li>
+                        <li><button onclick="generatePassword()">Generate Passsword</button> <button onclick="copyFn()">Copy to Clipboard</button></li>
+                    </ul>
+                </div>
             </div>
-            <div class="password-box">
-                <ul>
-                    <li><label for="lengthCheck">set length:</label><input type="number" id="lengthCheck" placeholder="0" min="8" max="128"><button onclick="setLength()">save</button></li>
-                    <li><textarea id="password" cols="40" rows="6" placeholder="password will go here."></textarea></li>
-                    <li><button onclick="generatePassword()">Generate Passsword</button></li>
-                    <li><button onclick="copyFn()">Copy to Clipboard</button></li>
-                </ul>
+            <div class="col-4 offset-4" id="footer">
+                Copyright © 2019-2020 Omar Minaya. All rights reserved.
             </div>
         </div>
     </body>
