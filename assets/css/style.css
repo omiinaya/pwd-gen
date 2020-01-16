@@ -1,0 +1,18 @@
+h1 {
+    font-family: 'Fira Code', monospace;
+    text-align: center;
+}
+body {
+    background-image: url(../images/code.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    font-family: 'Fira Code', monospace;
+}
+.link {
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+}

@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/css/style.css">
+
         <title>Password Generator</title>
-        <script src="scripts.js"></script>
+        <script src="assets/scripts/scripts.js"></script>
     </head>
     <body>
-        <p>WIP Password Generator</p>
-
-        <input type="checkbox" id="lowerCheck" onclick="lowerFn()"> Lowercase
-        <br>
-        <input type="checkbox" id="upperCheck" onclick="upperFn()"> Uppercase
-        <br>
-        <input type="checkbox" id="specialCheck" onclick="specialFn()"> Special Characters
-        <br>
-        <input type="checkbox" id="numericCheck" onclick="numericFn()"> Numeric Characters
-        <br>
-        set length: 
-        <input type="number" id="lengthCheck" placeholder="0" min="8" max="128">
-        <button onclick="setLength()">save</button>
-        <br>
-        <textarea id="password" cols="40" rows="5" placeholder="password will go here."></textarea>
-        <button onclick="copyFn()">Copy to Clipboard</button>
-        <br>
-        <button onclick="generatePassword()">Generate Passsword</button>
+        <h1>WIP Password Generator</h1>
+    <div class="checkbox-grid">
+        <ul>
+            <li><input type="checkbox" id="lowerCheck" onclick="lowerFn()"><label for="lowerCheck">Lowercase</label></li>
+            <li><input type="checkbox" id="upperCheck" onclick="upperFn()"><label for="upperCheck">Uppercase</label></li>
+            <li><input type="checkbox" id="specialCheck" onclick="specialFn()"><label for="specialCheck">Special Characters</label></li>
+            <li><input type="checkbox" id="numericCheck" onclick="numericFn()"><label for="numericCheck">Numeric Characters</label></li>
+        </ul>
+    </div>
+    <div>  
+        <ul>
+            <li><label for="lengthCheck">set length:</label><input type="number" id="lengthCheck" placeholder="0" min="8" max="128"><button onclick="setLength()">save</button></li>
+            <li><textarea id="password" cols="40" rows="6" placeholder="password will go here."></textarea><img src="assets/images/clipboard.png" class="link" onclick="copyFn()" height="30px" /></li>
+            <li><button onclick="generatePassword()">Generate Passsword</button></li>
+        </ul>
+    </div>
     </body>
 </html>
-
