@@ -8,12 +8,10 @@ let length = 0;
 function arrayMerge(a, b) {
     if (document.getElementById(a).checked == true){
         charset = charset.concat(b);
-        console.log(charset);
     } else {
         charset = charset.filter(function (item) {
         return b.indexOf(item) === -1;
         });
-        console.log(charset);
     }
 }
 function copyFn() {
@@ -21,7 +19,7 @@ function copyFn() {
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     document.execCommand("copy");
-  }
+}
 function setLength() {
     var pwdLength=document.getElementById("lengthCheck");
     if (pwdLength.value<8) {
@@ -42,8 +40,6 @@ function setLength() {
     document.getElementById("lengthCheck").placeholder = length;
     document.getElementById("lengthCheck").value = "";
     }
-    console.log("new password length: "+length);
-    console.log(document.getElementById("lengthCheck").placeholder);
 }
 function generatePassword() {
     var result = "";
@@ -56,7 +52,5 @@ function generatePassword() {
         for (var i=0; i<length;i++)
         result += charset[Math.floor(Math.random()*charset.length)];
         document.getElementById("password").value = result;
-        console.log(charset);
-        console.log(result);
     }
 }
