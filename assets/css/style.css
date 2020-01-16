@@ -3,7 +3,7 @@ h1 {
     text-align: center;
 }
 body {
-    background-image: url(../images/code.jpg);
+    background-image: url(../images/placeholder.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -19,7 +19,9 @@ ul {
     padding: 5px;
 }
 .app-container {
-    
+    border-style: solid;
+    border-width: 3px;
+    border-color:black;
 }
 .checkbox-grid {
     text-align:center;
