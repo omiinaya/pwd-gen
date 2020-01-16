@@ -16,6 +16,12 @@ function arrayMerge(a, b) {
         console.log(charset);
     }
 }
+function copyFn() {
+    var copyText = document.getElementById("password");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+  }
 function setLength() {
     var pwdLength=document.getElementById("lengthCheck");
     if (pwdLength.value<8) {
