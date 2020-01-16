@@ -5,60 +5,17 @@ let upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q"
 let charset = [];
 let length = 0;
 
-function specialFn() {
-    var checkBox = document.getElementById("specialCheck");
-    if (checkBox.checked == true){
-        charset = charset.concat(special);
+function arrayMerge(a, b) {
+    if (document.getElementById(a).checked == true){
+        charset = charset.concat(b);
         console.log(charset);
     } else {
         charset = charset.filter(function (item) {
-        return special.indexOf(item) === -1;
+        return b.indexOf(item) === -1;
         });
         console.log(charset);
     }
 }
-function numericFn() {
-    var checkBox = document.getElementById("numericCheck");
-    if (checkBox.checked == true){
-        charset = charset.concat(numeric);
-        console.log(charset);
-    } else {
-        charset = charset.filter(function (item) {
-        return numeric.indexOf(item) === -1;
-        });
-        console.log(charset);
-    }
-}
-function lowerFn() {
-    var checkBox = document.getElementById("lowerCheck");
-    if (checkBox.checked == true){
-        charset = charset.concat(lower);
-        console.log(charset);
-    } else {
-        charset = charset.filter(function (item) {
-        return lower.indexOf(item) === -1;
-        });
-        console.log(charset);
-    }
-}
-function upperFn() {
-    var checkBox = document.getElementById("upperCheck");
-    if (checkBox.checked == true){
-        charset = charset.concat(upper);
-        console.log(charset);
-    } else {
-        charset = charset.filter(function (item) {
-        return upper.indexOf(item) === -1;
-        });
-        console.log(charset);
-    }
-}
-function copyFn() {
-    var copyText = document.getElementById("password");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-    document.execCommand("copy");
-  }
 function setLength() {
     var pwdLength=document.getElementById("lengthCheck");
     if (pwdLength.value<8) {
@@ -95,6 +52,5 @@ function generatePassword() {
         document.getElementById("password").value = result;
         console.log(charset);
         console.log(result);
-        console.log(result.length);
     }
 }

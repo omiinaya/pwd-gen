@@ -16,12 +16,12 @@
                 <br>
                 <div class="checkbox-grid">
                     <ul>
-                        <li><input type="checkbox" id="lowerCheck" onclick="lowerFn()"><label for="lowerCheck">Lowercase</label></li>
-                        <li><input type="checkbox" id="upperCheck" onclick="upperFn()"><label for="upperCheck">Uppercase</label></li>
+                        <li><input type="checkbox" id="lowerCheck" onclick='arrayMerge("lowerCheck", lower)'><label for="lowerCheck">Lowercase</label></li>
+                        <li><input type="checkbox" id="upperCheck" onclick='arrayMerge("upperCheck", upper)'><label for="upperCheck">Uppercase</label></li>
                     </ul>
                     <ul>
-                        <li><input type="checkbox" id="specialCheck" onclick="specialFn()"><label for="specialCheck">Special</label></li>
-                        <li><input type="checkbox" id="numericCheck" onclick="numericFn()"><label for="numericCheck">Numeric</label></li>
+                        <li><input type="checkbox" id="specialCheck" onclick='arrayMerge("specialCheck",special)'><label for="specialCheck">Special</label></li>
+                        <li><input type="checkbox" id="numericCheck" onclick='arrayMerge("numericCheck", numeric)'><label for="numericCheck">Numeric</label></li>
                     </ul>
                 </div>
                 <div class="password-box">
