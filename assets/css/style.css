@@ -15,9 +15,6 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-.img-link {
-    cursor: pointer;
-}
 ul {
     list-style-type: none;
     display: inline-block;
