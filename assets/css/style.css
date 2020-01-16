@@ -15,4 +15,15 @@ body {
 }
 ul {
     list-style-type: none;
+    display: inline-block;
+    padding: 5px;
+}
+.app-container {
+    
+}
+.checkbox-grid {
+    text-align:center;
+}
+.password-box {
+    text-align:center;
 }
