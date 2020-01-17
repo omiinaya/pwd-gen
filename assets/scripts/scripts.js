@@ -3,7 +3,7 @@ let numeric = ["0","1","2","3","4","5","6","7","8","9"];
 let lower = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 let upper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 let charset = [];
-let length = 0;
+let newLength = 8;
 
 function arrayMerge(a, b) {
     if (document.getElementById(a).checked == true){
@@ -22,23 +22,40 @@ function copyFn() {
 }
 function setLength() {
     var pwdLength=document.getElementById("lengthCheck");
-    if (pwdLength.value<8) {
-        length=8;
+    if (pwdLength.value=="") {
+        if (pwdLength.placeholder <8) {
+            alert("You first need to set a length.");
+        } else {
+        newLength = pwdLength.placeholder;
+        console.log("placeholder: "+pwdLength.placeholder);
+        console.log("value: "+pwdLength.value);
+        console.log("var length: "+newLength);
+        }
+    }
+    else if (pwdLength.value<8) {
+        newLength=8;
         alert("minimum password length is 8.");
-
-        document.getElementById("lengthCheck").placeholder = length;
+        document.getElementById("lengthCheck").placeholder = newLength;
         document.getElementById("lengthCheck").value = "";
+        console.log("placeholder: "+pwdLength.placeholder);
+        console.log("value: "+pwdLength.value);
+        console.log("var length: "+newLength);
     }
     else if (pwdLength.value>128) {
-        length=128;
+        newLength=128;
         alert("maximum password length is 128.");
-
-        document.getElementById("lengthCheck").placeholder = length;
+        document.getElementById("lengthCheck").placeholder = newLength;
         document.getElementById("lengthCheck").value = "";
+        console.log("placeholder: "+pwdLength.placeholder);
+        console.log("value: "+pwdLength.value);
+        console.log("var length: "+newLength);
     } else {
-    length = pwdLength.value;
-    document.getElementById("lengthCheck").placeholder = length;
-    document.getElementById("lengthCheck").value = "";
+        newLength = pwdLength.value;
+        document.getElementById("lengthCheck").placeholder = newLength;
+        document.getElementById("lengthCheck").value = "";
+        console.log("placeholder: "+pwdLength.placeholder);
+        console.log("value: "+pwdLength.value);
+        console.log("var length: "+newLength);
     }
 }
 function generatePassword() {
@@ -46,10 +63,10 @@ function generatePassword() {
     if (charset.length < 1) {
         alert("You must choose at least one of the options.");
     }
-    else if (length==0) {
+    else if (pwdLength.placeholder==0) {
         alert("You must set a length for the password.");
     } else {
-        for (var i=0; i<length;i++)
+        for (var i=0; i<newLength;i++)
         result += charset[Math.floor(Math.random()*charset.length)];
         document.getElementById("password").value = result;
     }
