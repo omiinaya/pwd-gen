@@ -9,8 +9,8 @@ function arrayMerge(a, b) {
     if (document.getElementById(a).checked == true){
         charset = charset.concat(b);
     } else {
-        charset = charset.filter(function (item) {
-        return b.indexOf(item) === -1;
+        charset = charset.filter(function (c) {
+        return b.indexOf(c) === -1;
         });
     }
 }
@@ -27,41 +27,28 @@ function copyFn() {
 }
 function setLength() {
     var pwdLength=document.getElementById("lengthCheck");
-    
     if (pwdLength.value=="") {
         if (pwdLength.placeholder <8) {
             alert("Password length cannot be less than 8.");
             pwdLength.placeholder = 8;
         }
         newLength = pwdLength.placeholder;
-        console.log("placeholder: "+pwdLength.placeholder);
-        console.log("value: "+pwdLength.value);
-        console.log("var length: "+newLength);
     }
     else if (pwdLength.value<8) {
         newLength=8;
         alert("Password length cannot be less than 8.");
         document.getElementById("lengthCheck").placeholder = newLength;
         document.getElementById("lengthCheck").value = "";
-        console.log("placeholder: "+pwdLength.placeholder);
-        console.log("value: "+pwdLength.value);
-        console.log("var length: "+newLength);
     }
     else if (pwdLength.value>128) {
         newLength=128;
         alert("Password length cannot be more than 128.");
         document.getElementById("lengthCheck").placeholder = newLength;
         document.getElementById("lengthCheck").value = "";
-        console.log("placeholder: "+pwdLength.placeholder);
-        console.log("value: "+pwdLength.value);
-        console.log("var length: "+newLength);
     } else {
         newLength = pwdLength.value;
         document.getElementById("lengthCheck").placeholder = newLength;
         document.getElementById("lengthCheck").value = "";
-        console.log("placeholder: "+pwdLength.placeholder);
-        console.log("value: "+pwdLength.value);
-        console.log("var length: "+newLength);
     }
 }
 function generatePassword() {
