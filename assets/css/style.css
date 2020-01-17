@@ -40,3 +40,16 @@ ul {
     text-align: center;
     font-size: 1vw;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance:textfield;
+    width: 8%;
+}
+.buttons {
+    -webkit-appearance: none;
+    margin: 0%;
+}
