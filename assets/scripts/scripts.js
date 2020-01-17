@@ -22,15 +22,16 @@ function copyFn() {
 }
 function setLength() {
     var pwdLength=document.getElementById("lengthCheck");
+    
     if (pwdLength.value=="") {
         if (pwdLength.placeholder <8) {
-            alert("You first need to set a length.");
-        } else {
+            alert("You first need to set a value.");
+            pwdLength.placeholder = 8;
+        }
         newLength = pwdLength.placeholder;
         console.log("placeholder: "+pwdLength.placeholder);
         console.log("value: "+pwdLength.value);
         console.log("var length: "+newLength);
-        }
     }
     else if (pwdLength.value<8) {
         newLength=8;
@@ -62,9 +63,6 @@ function generatePassword() {
     var result = "";
     if (charset.length < 1) {
         alert("You must choose at least one of the options.");
-    }
-    else if (pwdLength.placeholder==0) {
-        alert("You must set a length for the password.");
     } else {
         for (var i=0; i<newLength;i++)
         result += charset[Math.floor(Math.random()*charset.length)];
