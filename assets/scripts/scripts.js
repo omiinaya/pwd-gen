@@ -35,7 +35,7 @@ function setLength() {
     }
     else if (pwdLength.value<8) {
         newLength=8;
-        alert("minimum password length is 8.");
+        alert("Password length cannot be less than 8.");
         document.getElementById("lengthCheck").placeholder = newLength;
         document.getElementById("lengthCheck").value = "";
         console.log("placeholder: "+pwdLength.placeholder);
@@ -44,7 +44,7 @@ function setLength() {
     }
     else if (pwdLength.value>128) {
         newLength=128;
-        alert("maximum password length is 128.");
+        alert("Password length cannot be more than 128.");
         document.getElementById("lengthCheck").placeholder = newLength;
         document.getElementById("lengthCheck").value = "";
         console.log("placeholder: "+pwdLength.placeholder);
@@ -62,7 +62,7 @@ function setLength() {
 function generatePassword() {
     var result = "";
     if (charset.length < 1) {
-        alert("You must choose at least one of the options.");
+        alert("You must check at least one of the checkboxes.");
     } else {
         for (var i=0; i<newLength;i++)
         result += charset[Math.floor(Math.random()*charset.length)];
