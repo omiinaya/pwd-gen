@@ -47,9 +47,5 @@ input::-webkit-inner-spin-button {
 }
 input[type=number] {
     -moz-appearance:textfield;
-    width: 8%;
-}
-.buttons {
-    -webkit-appearance: none;
-    margin: 0%;
+    width: 20%;
 }
