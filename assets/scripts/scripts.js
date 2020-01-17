@@ -25,7 +25,7 @@ function setLength() {
     
     if (pwdLength.value=="") {
         if (pwdLength.placeholder <8) {
-            alert("You first need to set a value.");
+            alert("Password length cannot be less than 8.");
             pwdLength.placeholder = 8;
         }
         newLength = pwdLength.placeholder;
