@@ -22,29 +22,23 @@ function copyFn() {
         copyText.select();
         copyText.setSelectionRange(0, 99999);
         document.execCommand("copy");
-        console.log(document.getElementById("password").value);
     }
 }
 function generatePassword() {
     var pwdLength=document.getElementById("lengthCheck");
     if (pwdLength.value=="") {
         alert("You must set a length first.");
-        console.log(pwdLength.value);
     }
     else if (pwdLength.value<8 || pwdLength.value>128) {
         if (pwdLength.value<8) {
             alert("Password must be at least 8 characters.");
             pwdLength.value=8;
             newLength=pwdLength.value;
-            console.log(pwdLength.value);
-            console.log(newLength);
         }
         else if (pwdLength.value>128) {
             alert("Password must be at most 128 characters.");
             pwdLength.value=128;
             newLength=pwdLength.value;
-            console.log(pwdLength.value);
-            console.log(newLength);
         }
     } else {
         var result = "";
@@ -56,7 +50,5 @@ function generatePassword() {
             result += charset[Math.floor(Math.random()*charset.length)];
             document.getElementById("password").value = result;
         }
-        console.log(pwdLength.value);
-        console.log(newLength);
     }
 }
