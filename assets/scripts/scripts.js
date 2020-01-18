@@ -25,39 +25,38 @@ function copyFn() {
         console.log(document.getElementById("password").value);
     }
 }
-function setLength() {
+function generatePassword() {
     var pwdLength=document.getElementById("lengthCheck");
     if (pwdLength.value=="") {
-        if (pwdLength.placeholder <8) {
-            alert("Password length cannot be less than 8.");
-            pwdLength.placeholder = 8;
+        alert("You must set a length first.");
+        console.log(pwdLength.value);
+    }
+    else if (pwdLength.value<8 || pwdLength.value>128) {
+        if (pwdLength.value<8) {
+            alert("Password must be at least 8 characters.");
+            pwdLength.value=8;
+            newLength=pwdLength.value;
+            console.log(pwdLength.value);
+            console.log(newLength);
         }
-        newLength = pwdLength.placeholder;
-    }
-    else if (pwdLength.value<8) {
-        newLength=8;
-        alert("Password length cannot be less than 8.");
-        document.getElementById("lengthCheck").placeholder = newLength;
-        document.getElementById("lengthCheck").value = "";
-    }
-    else if (pwdLength.value>128) {
-        newLength=128;
-        alert("Password length cannot be more than 128.");
-        document.getElementById("lengthCheck").placeholder = newLength;
-        document.getElementById("lengthCheck").value = "";
+        else if (pwdLength.value>128) {
+            alert("Password must be at most 128 characters.");
+            pwdLength.value=128;
+            newLength=pwdLength.value;
+            console.log(pwdLength.value);
+            console.log(newLength);
+        }
     } else {
-        newLength = pwdLength.value;
-        document.getElementById("lengthCheck").placeholder = newLength;
-        document.getElementById("lengthCheck").value = "";
-    }
-}
-function generatePassword() {
-    var result = "";
-    if (charset.length < 1) {
-        alert("You must check at least one of the checkboxes.");
-    } else {
-        for (var i=0; i<newLength;i++)
-        result += charset[Math.floor(Math.random()*charset.length)];
-        document.getElementById("password").value = result;
+        var result = "";
+        newLength=pwdLength.value;
+        if (charset.length < 1) {
+            alert("You must check at least one of the checkboxes.");
+        } else {
+            for (var i=0; i<newLength;i++)
+            result += charset[Math.floor(Math.random()*charset.length)];
+            document.getElementById("password").value = result;
+        }
+        console.log(pwdLength.value);
+        console.log(newLength);
     }
 }
