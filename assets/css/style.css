@@ -3,13 +3,6 @@ h1 {
     font-size: 28px;
     text-align: center;
 }
-.header-bar {
-    margin: 0 auto;
-    background-color: black;
-    align-items: center;
-    width: 100%;
-    opacity: 90%;
-}
 body {
     font-family: 'Fira Code', monospace;
     background-image: url(https://media.giphy.com/media/Y0cKnGMCBTNTi/giphy.gif);
@@ -66,7 +59,4 @@ input[type=number] {
     .app-container {
         width: 100%;
     }
-}
-html,body{
-    overflow-x: hidden;
 }
