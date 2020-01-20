@@ -1,10 +1,13 @@
 h1 {
     color:white;
-    font-size: 2.3vw;
+    font-size: 28px;
     text-align: center;
 }
 .header-bar {
+    margin: 0 auto;
     background-color: black;
+    align-items: center;
+    width: 100%;
     opacity: 90%;
 }
 body {
@@ -16,29 +19,31 @@ body {
 }
 ul {
     list-style-type: none;
+    padding:0;
     display: inline-block;
-    padding: 5px;
-    font-size: 1.3vw;
+    color:white;
 }
-#app-container {
+img {
+    width: 100%;
+    height: auto;
+}
+.app-container {
+    margin: 0 auto;
+    text-align:center;
     border-style: solid;
     border-width: 3px;
     border-color:white;
     background-color: black;
+    width: 690px;
     opacity: 90%;
 }
-.checkbox-grid {
+.footer {
     color:white;
-    text-align:center;
-}
-.password-box {
-    color:white;
-    text-align:center;
-}
-#footer {
-    color:white;
+    margin: 0 auto;
+    align-items: initial;
     text-align: center;
-    font-size: 1vw;
+    font-size: 15px;
+    width: 100%;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -46,4 +51,22 @@ input::-webkit-inner-spin-button {
 }
 input[type=number] {
     -moz-appearance:textfield;
+}
+@media screen and (max-width:1024px) {
+    .app-container {
+        width: 100%;
+    }
+}
+@media screen and (max-width:768px) {
+    .app-container {
+        width: 100%;
+    }
+}
+@media screen and (max-width:375px) {
+    .app-container {
+        width: 100%;
+    }
+}
+html,body{
+    overflow-x: hidden;
 }
