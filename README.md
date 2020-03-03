@@ -1,4 +1,4 @@
-# pwdgen | https://omiinaya.github.io/pwdgen
+# pwdgen | https://omiinaya.github.io/pwd-gen
 
 This is a secure password generator made using a dynamic HTML webpage, semantic tags, JavaScript, CSS for styling and Bootstrap elements for responsiveness.
 
